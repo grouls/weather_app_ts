@@ -1,12 +1,10 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import { weatherApi }                          from './services/weather'
-
+import { Action, ThunkAction, configureStore }       from '@reduxjs/toolkit';
 
 export const store = configureStore({
   reducer: {
-    [weatherApi.reducerPath]: weatherApi.reducer,
+    //[imported.reducerPath] : imported.reducer
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(weatherApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware()//.concat(importedApi.middleware),
 })
 
 export type AppDispatch = typeof store.dispatch;

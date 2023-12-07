@@ -1,3 +1,9 @@
-export const config = {
-  'BASE_URL':'https://api.openweathermap.org/data/2.5'
-};
+export const baseUrl = 'localhost:3000'
+
+export type Response = {
+  list: string[]
+}
+
+export type Request = {
+  order: string
+}
